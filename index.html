@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+</head>
+<style>
+ table{
+    margin-left:40%;
+    margin-top: 5%;
+    border:2px solid royalblue;
+    padding:50px;
+ }
+ td{
+    padding:20px;
+ }
+ h3{
+    text-align:center;
+    margin-top:5%;
+ }
+ button{
+    padding:8px;
+    border-radius:5px;
+    background-color: royalblue;
+    color:white;
+ }
+</style>
+<body>
+    <h3>LOGIN FORM</h3>
+    <form>
+        <table>
+            <tr>
+               <td> <label>USERNAME</label></td>
+                <td><input></td>
+                </tr>
+                <tr>
+
+                <td> <label>PASSWORD</label></td>
+                <td><input id="pass" ></td>
+            </tr>
+            <tr>
+                <td><button onclick="CheckPassword()"> SUBMIT</button></td>
+
+                <td><button>CANCEL </button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+var a=document.getElementById("pass");
+function CheckPassword() 
+{ 
+var passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+if(a.value.match(passw)) 
+{ 
+alert('Form Successfully Sumbitted')
+return true;
+}
+else
+{ 
+alert('Enter Strong PassWord')
+return false;
+}
+}
+</script>
+</html>
